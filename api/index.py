@@ -11,6 +11,7 @@ with open(json_path, 'r') as f:
 
 class handler(BaseHTTPRequestHandler):
     def do_GET(self):
+        # Enable CORS
         self.send_response(200)
         self.send_header("Content-type", "application/json")
         self.send_header("Access-Control-Allow-Origin", "*")
